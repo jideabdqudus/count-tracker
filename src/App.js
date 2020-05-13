@@ -5,11 +5,11 @@ import './tailwind.generated.css';
 const App = () => {
   const [count, addCount] = useState(0);
   return (
-    <div className="App">
+    <div className="App px-6 py-4">
       <h1>Count-Tracker</h1>
       <div>Button was clicked {count} times</div>
       <button className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"} onClick={() => addCount(count + 1)}>Add</button>
-      <button onClick={() => addCount(count - 1)}>Subtract</button>
+      <button className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"}onClick={() => addCount(count - 1)}>Subtract</button>
     </div>
   );
 };
