@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import './tailwind.generated.css';
 
 const App = () => {
   const [count, addCount] = useState(0);
@@ -7,15 +8,12 @@ const App = () => {
     <div className="App">
       <h1>Count-Tracker</h1>
       <div>Button was clicked {count} times</div>
-      <button style={buttonStyles} onClick={() => addCount(count + 1)}>Add</button>
+      <button className={"bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"} onClick={() => addCount(count + 1)}>Add</button>
       <button onClick={() => addCount(count - 1)}>Subtract</button>
     </div>
   );
 };
 
-const buttonStyles =() =>{
-  
-}
 
 export default App;
 
